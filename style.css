@@ -2,11 +2,36 @@
 
 body{
     text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size:18px;
+}
+
+.oldPaper{
+    margin:0 auto;
+    background-color: bisque;
+    width:60%;
+    border-radius: 30px;
+    padding:10px;
+     
+}
+
+.bold{
+    font-weight: bold;
+    color:crimson;
+    font-size: 1.3rem;
+    margin:0 10px;
 }
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
+    body{
+        text-align: left;
+    }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
+    body{
+        text-align: left;
+    }
 }
