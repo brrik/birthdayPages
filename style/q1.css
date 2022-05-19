@@ -2,11 +2,15 @@ td{
     background-color: white;
     border:solid;
     width: 15%;
-    height:30px;
+    height:60px;
     margin:auto;
 
 }
 
 .selectColor{
+    width:100%;
+}
+
+table tr #answerColor{
     width:100%;
 }
