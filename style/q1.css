@@ -11,6 +11,31 @@ td{
     width:100%;
 }
 
-table tr #answerColor{
+#ansTable{
     width:100%;
+}
+
+#selectedColor{
+    text-align: center;
+    font-size: 40px;
+}
+
+#selectColorShow{
+    text-align: center;
+    font-size: 40px;
+}
+
+#answerColor{
+    text-align: center;
+    font-size: 40px;
+}
+
+#ansColorShow{
+    text-align: center;
+    font-size: 40px;
+}
+
+#score{
+    text-align: center;
+    font-size: 30px;
 }
