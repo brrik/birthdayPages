@@ -1,10 +1,14 @@
+body{
+    text-align: center;
+    align-items: center;
+}
 td{
     background-color: white;
     border:solid;
     width: 15%;
-    height:60px;
+    height:40px;
     margin:auto;
-
+    border-radius: 13px;
 }
 
 .selectColor{
@@ -38,4 +42,13 @@ td{
 #score{
     text-align: center;
     font-size: 30px;
+    border:none;
+}
+
+#question{
+    display:block;
+}
+
+#cleared{
+    display: none;
 }

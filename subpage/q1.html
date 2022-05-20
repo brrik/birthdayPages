@@ -8,65 +8,69 @@
     <link rel="stylesheet" href="../style/q1.css">
 </head>
 <body>
-    <div class="head">
-        <h1>白って200色あんねんで！ゲーム</h1>
-        <h2>※実際の実装は</h2>
-        <table id="ansTable">
-            <tr>
-                <td id="score" colspan="2">現在のポイント：<span id="thisPoint"></span>  
-                    現在のスコア：<span id="thisScore"></span></td>
-            </tr>
-            <tr>
-                <td id="answerColor">答えの色</td>
-                <td id="ansColorShow"></td>
-            </tr>
-            <tr>
-                <td id="selectedColor">選択した色</td>
-                <td id="selectColorShow"></td>
-            </tr>
-        </table>
+    <div id="question">
+        <div class="head">
+            <h1>白って200色あんねんで！ゲーム</h1>
+            <h2>※実際の実装は</h2>
+            <h1 id="alertArea">見本と同じ色を選んでね！</h1>
+            <table id="ansTable">
+                <tr>
+                    <td id="score" colspan="2">現在のポイント：<span id="thisPoint">100</span>  
+                        現在のスコア：<span id="thisScore">0</span></td>
+                </tr>
+                <tr>
+                    <td id="answerColor">答えの色</td>
+                    <td id="ansColorShow"></td>
+                </tr>
+                <tr>
+                    <td id="selectedColor">選択した色</td>
+                    <td id="selectColorShow"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="selectColor">
+                <tr>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                </tr>
+                <tr>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                </tr>
+                <tr>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                </tr>
+                <tr>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                </tr>
+                <tr>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                    <td class="q"></td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div>
-        <table class="selectColor">
-            <tr>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-            </tr>
-            <tr>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-            </tr>
-            <tr>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-            </tr>
-            <tr>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-            </tr>
-            <tr>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-                <td class="q" onclick="main()"></td>
-            </tr>
-        </table>
+    <div id="cleared">
+        <p>ほげほげほげ</p>
     </div>
-
-
 <script src="../script/q1.js"></script>
 </body>
 </html>
