@@ -114,7 +114,7 @@ function scoreCheck(){
             x.style.display = "block";
             document.getElementById("gameOverTime").innerText = gameOver;
         };
-
+        main();
     }else{
         document.getElementById("alertArea").innerText = "ちがうなぁ・・・";
         document.getElementById("thisPoint").innerText = thisPoint - 10;
