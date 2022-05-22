@@ -52,3 +52,7 @@ td{
 #cleared{
     display: none;
 }
+
+.clearedMsg{
+    display:none;
+}

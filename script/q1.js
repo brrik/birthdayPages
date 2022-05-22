@@ -1,11 +1,20 @@
 let gameOver = 0;
+let clearMsg = 0;
 
 window.onload = function(){
     //alert("test");
     console.log("Loadしたよ");
     let tdList = document.getElementsByTagName("td");
     console.log(tdList.length);
-    for(i=6;i<tdList.length;i++){
+
+    //デバッグ用のやつ コンソールに出てくる答えと照らし合わせる用
+    /*
+    for(i=1; i<tdList.length; i++){
+        tdList[i].innerText = i;
+    }
+    */
+
+    for(i=5;i<tdList.length;i++){
         tdList[i].addEventListener("click", scoreCheck)
     };
     main();
@@ -16,33 +25,36 @@ function main(){
     let ansNum = Math.floor(Math.random() * (31-6)) + 6;
     let ansTD = document.getElementById("answerColor");
     let selectTD = document.getElementsByTagName("td");
+    console.log("ansNum : " + ansNum);
+    console.log("ansTD : " + ansTD);
+    
 
     let rndRed = 0;
     let rndGreen = 0;
     let rndBlue = 0;
 
-    let rndMain = 35;
-    let rndPlus = 255;
+    let rndMain = 15;
+    let rndPlus = 240;
 
     if(gameOver<3){
         //ゲームオーバー2回目まで
-        rndMain = 35;
-        rndPlus = 220;
+        rndMain = 15;
+        rndPlus = 240;
     }else if(gameOver<5){
         document.getElementById("alertArea").innerText = "おや？ちょっと難しいみたいだね。少し難易度を下げようか！";
         rndMain = 55;
         rndPlus = 200;
     }else if(gameOver<7){
-        document.getElementById("alertArea").innerText = "おや？ちょっと難しいみたいだね。もう少し難易度を下げようか！";
+        document.getElementById("alertArea").innerText = "おや？まだ少し難しいみたいだね。もう少し難易度を下げようか！";
         rndMain = 100;
         rndPlus = 155;
     }else if(gameOver>10){
-        document.getElementById("alertArea").innerText = "むずかしすぎたかな？いちばん簡単なモードにしたから頑張ってね！";
+        document.getElementById("alertArea").innerText = "むずかしすぎたかな？もう少し簡単にしたから頑張ってね！";
         rndMain = 255;
         rndPlus = 0;
     }
 
-    for(let i=6; i < selectTD.length; i ++){
+    for(let i=5; i < selectTD.length; i ++){
 
         rndRed = Math.floor(Math.random()*rndMain)+rndPlus;
         rndGreen = Math.floor(Math.random()*rndMain)+rndPlus;
@@ -60,6 +72,8 @@ function main(){
             ansTD.style.backgroundColor = rndColorHex;
             document.getElementById("ansColorShow").style.backgroundColor=rndColorHex;
             document.getElementById("ansColorShow").innerText = hexToRGB(rndColorHex);
+            console.log("ansColor : " + rndColorHex);
+            console.log("answerTD : " + i);
         };
     };
 };
@@ -96,9 +110,10 @@ function scoreCheck(){
             alert("ゲームクリア！！おめでとう！！");
             document.getElementById("question").style.display = "none";
             document.getElementById("cleared").style.display = "block";
-        }
-        console.log("正解からMainを呼ぶよ")
-        main();
+            let x = document.getElementById("clearedMsg");
+            x.style.display = "block";
+            document.getElementById("gameOverTime").innerText = gameOver;
+        };
 
     }else{
         document.getElementById("alertArea").innerText = "ちがうなぁ・・・";
